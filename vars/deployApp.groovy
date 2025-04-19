@@ -9,12 +9,6 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
         }
 
         stages {
-            stage('Check Docker') {
-                steps {
-                    sh 'which docker'
-                    sh 'docker --version'
-                }
-            }
             stage('Checkout') {
                 steps {
                     script {
