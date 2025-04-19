@@ -1,4 +1,8 @@
 
-void deploy() {
-    deployApp(2)
+void deployNetCore() {
+    
+}
+
+void deployeNode(){
+    deployApp(HiveSpaceConsantBE.project)
 }
