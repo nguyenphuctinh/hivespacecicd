@@ -6,5 +6,5 @@ void deployNetCore() {
 }
 
 void deployeNode(){
-    deployApp(HiveSpaceConsantBE.project)
+    deployApp(HiveSpaceConstantFE.project)
 }

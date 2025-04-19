@@ -1,6 +1,6 @@
 package org.constants
 
-public class HiveSpaceConsantFE {
+public class HiveSpaceConstantFE {
     
     static HiveSpaceProject project = new HiveSpaceProject(
         name: 'HiveSpace frontend',
