@@ -1,4 +1,5 @@
-import hivespace.*;
+import hivespace.constants.*
+
 
 
 void deployNetCore() {
