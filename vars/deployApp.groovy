@@ -1,3 +1,5 @@
+import hivespace.entity.*
+
 def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
     pipeline {
         agent any
