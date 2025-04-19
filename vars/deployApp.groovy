@@ -3,9 +3,7 @@ import hivespace.entity.*
 def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
     pipeline {
         agent {
-            node {
-                label 'docker-agent-apline'
-            }
+            docker { image 'dblmint/jenkins-agent-with-docker' }
         }
 
         stages {
