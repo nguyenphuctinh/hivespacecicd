@@ -5,6 +5,6 @@ void deployNetCore() {
     
 }
 
-void deployeNode(){
+void deployeFE(){
     deployApp(HiveSpaceConstantFE.project)
 }
