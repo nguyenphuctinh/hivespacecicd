@@ -6,7 +6,7 @@ class HiveSpaceProject implements Serializable {
     String gitRepo
     String branch
     String credentialsId
-    List<App> apps = []
+    List<HiveSpaceApp> apps = []
 
     HiveSpaceProject(Map args = [:]) {
         this.name = args.name ?: 'UnnamedProject'
