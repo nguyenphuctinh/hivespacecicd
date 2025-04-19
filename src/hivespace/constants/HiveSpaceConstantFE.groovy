@@ -1,4 +1,4 @@
-package org.constants
+package hivespace.constants
 
 import hivespace.entity.*
 
