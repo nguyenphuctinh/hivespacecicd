@@ -2,11 +2,7 @@ import hivespace.entity.*
 
 def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
     pipeline {
-        agent {
-            node {
-                label 'docker-agent-apline'
-            }
-        }
+        agent any
 
         stages {
             stage('Checkout') {
@@ -41,7 +37,7 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
 
         post {
             success {
-                echo '✅ All images built and pushed successfully'
+                echo "✅ All images built and pushed successfully"
             }
         }
     }
