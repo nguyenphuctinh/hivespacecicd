@@ -2,8 +2,9 @@ import hivespace.entity.*
 
 def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
     pipeline {
-        agent any
-
+        agent {
+            docker { image 'jenkins-agent-with-docker' }
+        }
         tools {
             nodejs 'NodeJS'
         }
