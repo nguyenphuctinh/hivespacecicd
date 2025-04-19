@@ -1,4 +1,4 @@
 
 void deploy() {
-    deploy()
+    deployApp()
 }
