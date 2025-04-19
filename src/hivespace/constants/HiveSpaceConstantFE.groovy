@@ -1,5 +1,7 @@
 package org.constants
 
+import hivespace.entity.*
+
 public class HiveSpaceConstantFE {
     
     static HiveSpaceProject project = new HiveSpaceProject(
