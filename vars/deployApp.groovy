@@ -2,9 +2,7 @@ import hivespace.entity.*
 
 def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
     pipeline {
-        agent {
-            docker { image 'dblmint/jenkins-agent-with-docker' }
-        }
+        agent any
 
         tools {
             nodejs 'NodeJS'
@@ -20,7 +18,7 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
             }
             stage('Install node dependencies') {
                 steps {
-                    sh 'npm install '
+                    sh 'npm install'
                 }
             }
 
