@@ -6,12 +6,21 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
             docker { image 'dblmint/jenkins-agent-with-docker' }
         }
 
+        tools {
+            nodejs 'NodeJS'
+        }
+
         stages {
             stage('Checkout') {
                 steps {
                     script {
                         git branch: project.branch, url: project.gitRepo
                     }
+                }
+            }
+            stage('Install node dependencies') {
+                steps {
+                    sh 'npm install '
                 }
             }
 
