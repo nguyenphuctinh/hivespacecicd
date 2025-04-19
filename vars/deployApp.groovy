@@ -1,18 +1,13 @@
-import hivespace.entity.*
-
 def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
     pipeline {
         agent any
 
-        environment {
-            GIT_REPO = project.gitRepo
-            GIT_BRANCH = project.branch
-        }
-
         stages {
             stage('Checkout') {
                 steps {
-                    git branch: GIT_BRANCH, url: GIT_REPO
+                    script {
+                        git branch: project.branch, url: project.gitRepo
+                    }
                 }
             }
 
@@ -40,7 +35,7 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
 
         post {
             success {
-                echo '✅ All images built and pushed successfully'
+                echo "✅ All images built and pushed successfully"
             }
         }
     }
