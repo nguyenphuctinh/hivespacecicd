@@ -7,9 +7,9 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
                 label 'docker-agent-apline'
             }
         }
-        tools {
-            nodejs 'NodeJS'
-        }
+        // tools {
+        //     nodejs 'NodeJS'
+        // }
 
         stages {
             stage('Checkout') {
