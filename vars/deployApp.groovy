@@ -10,7 +10,7 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
         // tools {
         //     nodejs 'NodeJS'
         // }
-        agent any
+        // agent any
         stages {
             stage('Checkout') {
                 steps {
