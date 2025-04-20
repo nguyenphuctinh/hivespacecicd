@@ -2,15 +2,15 @@ import hivespace.entity.*
 
 def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
     pipeline {
-        agent {
-            node {
-                label 'docker-agent-apline'
-            }
-        }
+        // agent {
+        //     node {
+        //         label 'docker-agent-apline'
+        //     }
+        // }
         // tools {
         //     nodejs 'NodeJS'
         // }
-
+        agent any
         stages {
             stage('Checkout') {
                 steps {
