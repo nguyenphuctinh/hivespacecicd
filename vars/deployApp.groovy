@@ -7,11 +7,10 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
                 label 'UbuntuSlave01'
             }
         }
-        // tools {
-        //     nodejs 'NodeJS'
-        // }
-        // agent any
         stages {
+            stage('Thông báo build') {
+               
+            }
             stage('Checkout') {
                 steps {
                     script {
