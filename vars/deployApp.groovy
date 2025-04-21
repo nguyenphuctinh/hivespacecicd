@@ -10,7 +10,7 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
         stages {
             stage('Notify that the build has started') {
                 steps {
-                    
+                    echo 'Notify that the build has started'
                 }
             }
             stage('Checkout') {
