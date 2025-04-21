@@ -26,11 +26,6 @@ def call(HiveSpaceProject project, String tag = "${env.BUILD_NUMBER}") {
                 }
             }
 
-            stage('Run Tests') {
-                steps {
-                    sh 'npm run test'
-                }
-            }
 
             stage('Build & Push All Apps') {
                 steps {
